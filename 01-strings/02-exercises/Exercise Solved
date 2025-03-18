@@ -124,6 +124,17 @@ int main() {
     getline(cin, s7);
     s6.insert(pos, s7);
     cout << "Updated string: " << s6 << "\n\n";
+ // Question 15: INSERT Function (Insert a word in a sentence at a specific position)
+    cout << "Enter a sentence: ";
+    cin.ignore();
+    getline(cin, s6);
+    cout << "Enter an index to insert at: ";
+    cin >> pos;
+    cin.ignore();
+    cout << "Enter a string to insert: ";
+    getline(cin, s7);
+    s6.insert(pos, s7);
+ cout << "Updated string: " << s6 << "\n\n";
 
     
 }
