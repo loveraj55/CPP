@@ -6,29 +6,57 @@ int main() {
     string s1, s2, s3, s4, s5, s6, s7;
     int index, pos;
 
-    /* Question 1: AT Function (Access character by index) */
-    /* Question 2:  SMJH NHE AA RAHA
-    /* Question 3: SMJH NHE AA RAHA */
-   
-    /* Question 4: LENGTH and SIZE Function (Find string length) */
+    // Question 1: Get a character from a string at a specific index
     cout << "Enter a string: ";
+    cin >> s1;
+    cout << "Enter an index: ";
+    cin >> index;
+    cout << "Character at index " << index << ": " << s1.at(index) << endl;
+
+    // Question 2: Check if the index is valid before accessing the character
+    cout << "\nEnter a string: ";
+    cin >> s1;
+    cout << "Enter an index: ";
+    cin >> index;
+    if (index >= 0 && index < s1.length()) {
+        cout << "Character at index " << index << ": " << s1.at(index) << endl;
+    } else {
+        cout << "Error: Index out of bounds!" << endl;
+    }
+
+    // Question 3: Keep asking until the user enters a valid index
+    cout << "\nEnter a string: ";
+    cin >> s1;
+    do {
+        cout << "Enter an index: ";
+        cin >> index;
+        if (index >= 0 && index < s1.length()) {
+            cout << "Character at index " << index << ": " << s1.at(index) << endl;
+            break;
+        } else {
+            cout << "Invalid index! Please enter a valid index." << endl;
+        }
+    } while (true);
+
+    // Question 4: LENGTH and SIZE Function (Find string length)
+    cout << "\nEnter a string: ";
     cin >> s2;
     cout << "Length using length(): " << s2.length() << "\n";
     cout << "Length using size(): " << s2.size() << "\n\n";
 
-    /* Question 5: LENGTH Function (Check if string is short or long) */
+    // Question 5: LENGTH Function (Check if string is short or long)
     cout << "Enter a string: ";
     cin >> s2;
     cout << "Length: " << s2.length() << "\n";
     cout << (s2.length() < 5 ? "This is a short string.\n\n" : "This is a long string.\n\n");
 
-    /* Question 6: LENGTH Function (Count characters including spaces) */
+    // Question 6: LENGTH Function (Count characters including spaces)
     cin.ignore();
     cout << "Enter a sentence: ";
     getline(cin, s2);
     cout << "Total characters: " << s2.length() << "\n\n";
 
-    /* Question 7: EMPTY Function (Ask user to enter a string) */
+    // Question 7: EMPTY Function (Ask user to enter a string)
     cout << "Do you want to enter a string? (yes/no): ";
     cin >> s3;
     if (s3 == "yes") {
@@ -38,18 +66,18 @@ int main() {
         cout << "Updated string: " << s3 << "\n\n";
     }
 
-    /* Question 8: EMPTY Function (Check if string is empty) */
+    // Question 8: EMPTY Function (Check if string is empty)
     cout << "Enter a string: ";
     cin.ignore();
     getline(cin, s3);
     cout << (s3.empty() ? "Warning: You entered an empty string!\n\n" : "Entered string: " + s3 + "\n\n");
 
-    /* Question 9: EMPTY Function (Check predefined string) */
+    // Question 9: EMPTY Function (Check predefined string)
     s3 = "Hello";
     cout << "Checking if the string is empty...\n";
     cout << "The string is not empty.\n\n";
 
-    /* Question 10: APPEND Function (Concatenate two strings) */
+    // Question 10: APPEND Function (Concatenate two strings)
     cout << "Enter first string: ";
     cin >> s4;
     cout << "Enter second string: ";
@@ -57,7 +85,7 @@ int main() {
     s4.append(s5);
     cout << "Appended string: " << s4 << "\n\n";
 
-    /* Question 11: APPEND Function (Concatenate two words) */
+    // Question 11: APPEND Function (Concatenate two words)
     cout << "Enter first word: ";
     cin >> s4;
     cout << "Enter second word: ";
@@ -65,7 +93,7 @@ int main() {
     s4.append(s5);
     cout << "Combined word: " << s4 << "\n\n";
 
-    /* Question 12: APPEND Function (Create email from username and domain) */
+    // Question 12: APPEND Function (Create email from username and domain)
     cout << "Enter username: ";
     cin >> s4;
     cout << "Enter domain: ";
@@ -73,25 +101,33 @@ int main() {
     s4.append(s5);
     cout << "Email: " << s4 << "\n\n";
 
-    /* Question 13: INSERT Function (Insert a string at a position) */
+    // Question 13: INSERT Function (Insert a string at a position)
     cout << "Enter a string: ";
-    cin >> s6;
+    cin.ignore();
+    getline(cin, s6);
     cout << "Enter an index to insert at: ";
     cin >> pos;
+    cin.ignore();
     cout << "Enter a string to insert: ";
-    cin >> s7;
+    getline(cin, s7);
     s6.insert(pos, s7);
     cout << "Updated string: " << s6 << "\n\n";
 
-    /* Question 14: INSERT Function (Insert *** at a position) */
+    // Question 14: INSERT Function (Insert *** at a position)
     cout << "Enter a string: ";
-    cin >> s6;
+    cin.ignore();
+    getline(cin, s6);
     cout << "Enter an index to insert at: ";
     cin >> pos;
+    cin.ignore();
     cout << "Enter a string to insert: ";
-    cin >> s7;
+    getline(cin, s7);
     s6.insert(pos, s7);
     cout << "Updated string: " << s6 << "\n\n";
 
-//     Question 15: SMJH NHE AA RAHA 
+    
 }
+
+
+    
+
